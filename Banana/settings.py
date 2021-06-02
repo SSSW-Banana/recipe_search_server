@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'recipes.apps.RecipesConfig',
     'images.apps.ImagesConfig',
+    'crawled_data',
 
 ]
 

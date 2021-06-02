@@ -21,11 +21,13 @@ from django.urls import path
 from rest_framework import routers
 from images.views import ImageViewSet
 from recipes.views import RecipeViewSet
+from crawled_data.views import CrawledViewSet
 
 
 router = routers.DefaultRouter()
 router.register('images', ImageViewSet)
 router.register('recipes', RecipeViewSet)
+router.register('crawled_data', CrawledViewSet)
 
 urlpatterns = [
     path(r'^admin/', admin.site.urls),
