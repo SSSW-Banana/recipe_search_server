@@ -1,8 +1,10 @@
 from rest_framework import serializers
-from .models import RecipeData
+from .models import Image
 
 
-class RecipeDataSerializer(serializers.ModelSerializer):
+class ImageSerializer(serializers.HyperlinkedModelSerializer):
+    image = serializers.ImageField(use_url=True)
+
     class Meta:
-        model = RecipeData
-        fields = ('title', 'link')
+        model = Image
+        fields = "__all__"
